@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { IconButton } from "@mui/material";
 import { MdDashboard } from "react-icons/md";
 import { FaUserFriends } from "react-icons/fa";
 
-import ProfileMenu from "./ProfileMenu";
+import ProfileMenu from "./ui/ProfileMenu";
+import LangMenu from "./ui/LangMenu";
 import "../styles/components/Header.scss";
 
 const Header = () => {
@@ -25,12 +25,7 @@ const Header = () => {
             </li>
           </ul>
           <div className="cta">
-            <IconButton className="lang">
-              <img
-                src="https://media.istockphoto.com/id/854115776/photo/flag-of-england.jpg?s=612x612&w=0&k=20&c=EojPOFUwYV_8vhsJ9RR06rmTwOsSpfVqWbbxGiVpxgk="
-                alt="language"
-              />
-            </IconButton>
+            <LangMenu />
             <ProfileMenu />
           </div>
         </div>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Avatar, Button, IconButton, List, styled } from "@mui/material";
 import { Menu, MenuItem, Fade } from "@mui/material";
 
-import "../styles/components/Header.scss";
+import "../../styles/components/Header.scss";
 
 const ProfileMenu = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
