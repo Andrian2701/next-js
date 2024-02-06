@@ -1,13 +1,22 @@
 import Grid from "@mui/material/Grid";
 
-import { widgetsData } from "@/data/Widgets";
+import { widgetsData } from "@/data/data";
 import "../../styles/components/dash/WidgetSummary.scss";
 
 const WidgetSummary = () => {
   return (
     <Grid sx={{ flexGrow: 1 }}>
-      <Grid item xs={12}>
-        <Grid container justifyContent="center" spacing={3}>
+      <Grid>
+        <Grid
+          justifyContent="center"
+          sx={{
+            padding: "3rem 0rem 3rem 0rem",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "2rem",
+            justifyContent: "space-between",
+          }}
+        >
           {widgetsData.map((item) => (
             <Grid key={item.title} item>
               <div className="widget" style={{ backgroundColor: item.bg }}>

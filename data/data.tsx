@@ -46,3 +46,11 @@ export const widgetsData: Widgets[] = [
     fontColor: "#b72136",
   },
 ];
+
+export const tasks: string[] = [
+  "Create New Logo",
+  "Bissness Meeting",
+  "Sport & Health",
+  "Sprint Showcase",
+  "Coffee",
+];

@@ -1,0 +1,33 @@
+.container {
+  width: 30rem;
+  padding: 1.5rem 0.8rem 1.5rem 0.8rem;
+  border-radius: 0.8rem;
+
+  h2 {
+    font-weight: 450;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding-left: 1rem;
+  }
+
+  .task-list {
+    max-width: 30rem;
+
+    .list-item {
+      &:hover {
+        background-color: #ffffff;
+      }
+
+      .button {
+        &:hover {
+          background-color: #ffffff;
+        }
+
+        .check-box {
+          color: #50c878;
+          transition: all 0.5s ease 0s;
+        }
+      }
+    }
+  }
+}
