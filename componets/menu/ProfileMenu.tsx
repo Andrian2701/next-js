@@ -1,7 +1,8 @@
 "use client";
+
 import { useState } from "react";
 import { Avatar, Button, IconButton, List, styled } from "@mui/material";
-import { Menu, MenuItem, Fade } from "@mui/material";
+import { Menu, MenuItem } from "@mui/material";
 
 import "../../styles/components/Header.scss";
 
@@ -50,7 +51,6 @@ const ProfileMenu = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        TransitionComponent={Fade}
         sx={{
           marginTop: "1rem",
         }}
@@ -72,6 +72,7 @@ const ProfileMenu = () => {
               display: "flex",
               justifyContent: "center",
               marginTop: "0.8rem",
+              paddingBottom: "6px",
             }}
           >
             <StyledButton disableRipple>Log out</StyledButton>

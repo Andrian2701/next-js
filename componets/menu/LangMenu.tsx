@@ -1,8 +1,11 @@
 "use client";
-import { useState } from "react";
-import { IconButton, List, Fade, Menu } from "@mui/material";
 
-import LangItems from "./LangItems";
+import { useState } from "react";
+import Image from "next/image";
+import { IconButton, List, Fade, Menu } from "@mui/material";
+import { MenuItem, Box } from "@mui/material";
+
+import { langItems } from "@/data/langItems";
 
 const LangMenu = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -49,7 +52,21 @@ const LangMenu = () => {
             padding: "0",
           }}
         >
-          <LangItems handleClose={handleClose} />
+          {langItems.map((item) => (
+            <MenuItem
+              onClick={handleClose}
+              sx={{ height: "38.5px", display: "flex", gap: "0.8rem" }}
+            >
+              <Box sx={{ height: "20px", width: "27px" }}>
+                <Image
+                  style={{ width: "100%", height: "100%" }}
+                  alt="language"
+                  src={item.img}
+                />
+              </Box>
+              {item.title}
+            </MenuItem>
+          ))}
         </List>
       </Menu>
     </>

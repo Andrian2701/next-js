@@ -2,7 +2,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 7rem 1rem 7rem;
+  padding: 1rem 8rem 1rem 8rem;
+
+  @media (max-width: 864px) {
+    padding: 1rem 5rem 1rem 5rem;
+  }
+
+  @media (max-width: 564px) {
+    padding: 1rem 2rem 1rem 2rem;
+  }
 
   .left {
     a {
@@ -25,13 +33,13 @@ nav {
       gap: 1.5rem;
 
       li {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
         cursor: pointer;
         color: rgb(99, 115, 129);
 
         a {
+          gap: 0.5rem;
+          display: flex;
+          align-items: center;
           text-decoration: none;
           color: #050505;
           font-size: 1rem;

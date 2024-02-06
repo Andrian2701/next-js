@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { MdDashboard } from "react-icons/md";
 import { FaUserFriends } from "react-icons/fa";
+import { RiShoppingBag2Fill } from "react-icons/ri";
 
-import ProfileMenu from "./ui/ProfileMenu";
-import LangMenu from "./ui/LangMenu";
+import ProfileMenu from "./menu/ProfileMenu";
+import LangMenu from "./menu/LangMenu";
 import "../styles/components/Header.scss";
 
 const Header = () => {
@@ -16,12 +16,16 @@ const Header = () => {
         <div className="right">
           <ul>
             <li>
-              <MdDashboard />
-              <Link href="/dash">Dash</Link>
+              <Link href="/users">
+                <FaUserFriends />
+                Users
+              </Link>
             </li>
             <li>
-              <FaUserFriends />
-              <Link href="/users">Users</Link>
+              <Link href="/products">
+                <RiShoppingBag2Fill />
+                Products
+              </Link>
             </li>
           </ul>
           <div className="cta">

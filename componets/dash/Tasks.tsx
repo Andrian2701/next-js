@@ -11,7 +11,7 @@ import {
   Checkbox,
 } from "@mui/material";
 
-import { tasks } from "@/data/data";
+import { tasks } from "@/data/tasks";
 import "../../styles/components/dash/Tasks.scss";
 
 const NewsUpdate = () => {
@@ -32,28 +32,26 @@ const NewsUpdate = () => {
     <Box className="container" boxShadow={2}>
       <h2>Tasks</h2>
       <List className="task-list">
-        {tasks.map((item, idx) => {
-          return (
-            <ListItem key={item} disablePadding>
-              <ListItemButton
-                onClick={handleToggle(idx)}
-                dense
-                disableRipple
-                className="list-item"
-              >
-                <ListItemIcon className="button">
-                  <Checkbox
-                    edge="start"
-                    checked={checked.indexOf(idx) !== -1}
-                    tabIndex={-1}
-                    className="check-box"
-                  />
-                </ListItemIcon>
-                <ListItemText>{item}</ListItemText>
-              </ListItemButton>
-            </ListItem>
-          );
-        })}
+        {tasks.map((item, idx) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton
+              onClick={handleToggle(idx)}
+              dense
+              disableRipple
+              className="list-item"
+            >
+              <ListItemIcon className="button">
+                <Checkbox
+                  edge="start"
+                  checked={checked.indexOf(idx) !== -1}
+                  tabIndex={-1}
+                  className="check-box"
+                />
+              </ListItemIcon>
+              <ListItemText>{item}</ListItemText>
+            </ListItemButton>
+          </ListItem>
+        ))}
       </List>
     </Box>
   );
