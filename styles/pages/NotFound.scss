@@ -1,0 +1,43 @@
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+
+    @media (max-width: 564px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  p {
+    letter-spacing: 0rem;
+    text-align: center;
+    color: #0000008a;
+  }
+
+  .not-found-img {
+    height: 18rem;
+    width: 25rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  a {
+    background-color: #50c878;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+  }
+}

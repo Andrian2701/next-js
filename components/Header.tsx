@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaUserFriends } from "react-icons/fa";
+import { BiSolidError } from "react-icons/bi";
 import { RiShoppingBag2Fill } from "react-icons/ri";
 
 import ProfileMenu from "./menu/ProfileMenu";
@@ -16,9 +16,9 @@ const Header = () => {
         <div className="right">
           <ul>
             <li>
-              <Link href="/users">
-                <FaUserFriends />
-                Users
+              <Link href="/not-found">
+                <BiSolidError />
+                Not Found
               </Link>
             </li>
             <li>

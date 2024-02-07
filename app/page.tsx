@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
+
 import OrderTimeline from "@/components/dash/OrderTimeline";
 import Tasks from "@/components/dash/Tasks";
 import WidgetSummary from "@/components/dash/WidgetSummary";
 import "../styles/pages/Home.scss";
 
-const Home = () => {
+export const metadata: Metadata = {
+  title: "Dashboard",
+};
+
+const Dashboard = () => {
   return (
     <>
       <h2>Hi, Welcome back</h2>
@@ -16,4 +22,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Dashboard;
