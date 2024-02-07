@@ -1,6 +1,6 @@
-import OrderTimeline from "@/componets/dash/OrderTimeline";
-import Tasks from "@/componets/dash/Tasks";
-import WidgetSummary from "@/componets/dash/WidgetSummary";
+import OrderTimeline from "@/components/dash/OrderTimeline";
+import Tasks from "@/components/dash/Tasks";
+import WidgetSummary from "@/components/dash/WidgetSummary";
 import "../styles/pages/Home.scss";
 
 const Home = () => {
