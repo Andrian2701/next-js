@@ -11,8 +11,9 @@ import {
   Checkbox,
 } from "@mui/material";
 
-import { tasks } from "@/data/tasks";
 import "../../styles/components/dash/Tasks.scss";
+
+const tasks: any = process.env.TASKS;
 
 const NewsUpdate = () => {
   const [checked, setChecked] = useState<number[]>([]);
@@ -32,7 +33,7 @@ const NewsUpdate = () => {
     <Box className="container" boxShadow={2}>
       <h2>Tasks</h2>
       <List className="task-list">
-        {tasks.map((item, idx) => (
+        {tasks.map((item: string, idx: number) => (
           <ListItem key={item} disablePadding>
             <ListItemButton
               onClick={handleToggle(idx)}

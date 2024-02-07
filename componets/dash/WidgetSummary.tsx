@@ -1,4 +1,4 @@
-import Grid from "@mui/material/Grid";
+import { Box, Grid } from "@mui/material";
 
 import { widgetsData } from "@/data/widgets";
 import "../../styles/components/dash/WidgetSummary.scss";
@@ -8,7 +8,11 @@ const WidgetSummary = () => {
     <Grid className="grid-container">
       {widgetsData.map((item) => (
         <Grid key={item.title}>
-          <div className="widget" style={{ backgroundColor: item.bg }}>
+          <Box
+            className="widget"
+            style={{ backgroundColor: item.bg }}
+            boxShadow={2}
+          >
             <div className="icon" style={{ color: item.iconColor }}>
               {item.icon}
             </div>
@@ -16,7 +20,7 @@ const WidgetSummary = () => {
               <h3 style={{ color: item.iconColor }}>{item.value}</h3>
               <p style={{ color: item.fontColor }}>{item.title}</p>
             </div>
-          </div>
+          </Box>
         </Grid>
       ))}
     </Grid>

@@ -1,0 +1,23 @@
+.order-container {
+  padding: 1.5rem 0.8rem 1.5rem 0.8rem;
+  border-radius: 0.8rem;
+  flex-grow: 0.3;
+
+  h2 {
+    font-weight: 450;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding-left: 1rem;
+  }
+
+  .stepper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    .stepper {
+      width: 60%;
+    }
+  }
+}

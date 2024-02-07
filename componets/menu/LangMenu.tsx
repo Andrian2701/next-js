@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { IconButton, List, Fade, Menu } from "@mui/material";
+import { IconButton, List, Fade, Menu, Tooltip } from "@mui/material";
 import { MenuItem, Box } from "@mui/material";
 
 import { langItems } from "@/data/langItems";
@@ -21,19 +21,21 @@ const LangMenu = () => {
 
   return (
     <>
-      <IconButton
-        className="lang"
-        id="fade-button"
-        aria-controls={open ? "fade-menu" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
-        onClick={handleClick}
-      >
-        <img
-          src="https://media.istockphoto.com/id/854115776/photo/flag-of-england.jpg?s=612x612&w=0&k=20&c=EojPOFUwYV_8vhsJ9RR06rmTwOsSpfVqWbbxGiVpxgk="
-          alt="language"
-        />
-      </IconButton>
+      <Tooltip title="Language">
+        <IconButton
+          className="lang"
+          id="fade-button"
+          aria-controls={open ? "fade-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? "true" : undefined}
+          onClick={handleClick}
+        >
+          <img
+            src="https://media.istockphoto.com/id/854115776/photo/flag-of-england.jpg?s=612x612&w=0&k=20&c=EojPOFUwYV_8vhsJ9RR06rmTwOsSpfVqWbbxGiVpxgk="
+            alt="language"
+          />
+        </IconButton>
+      </Tooltip>
       <Menu
         MenuListProps={{
           "aria-labelledby": "fade-button",
@@ -45,6 +47,8 @@ const LangMenu = () => {
         sx={{
           marginTop: "1rem",
         }}
+        transformOrigin={{ horizontal: "right", vertical: "top" }}
+        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <List
           sx={{

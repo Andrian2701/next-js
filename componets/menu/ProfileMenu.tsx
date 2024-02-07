@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Avatar, Button, IconButton, List, styled } from "@mui/material";
+import {
+  Avatar,
+  Button,
+  IconButton,
+  List,
+  Tooltip,
+  styled,
+} from "@mui/material";
 import { Menu, MenuItem } from "@mui/material";
 
 import "../../styles/components/Header.scss";
@@ -32,18 +39,21 @@ const ProfileMenu = () => {
 
   return (
     <>
-      <IconButton>
-        <Avatar
-          alt="avatar"
-          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww"
-          className="avatar"
-          id="fade-button"
-          aria-controls={open ? "fade-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-        />
-      </IconButton>
+      <Tooltip title="Profile">
+        <IconButton>
+          <Avatar
+            alt="avatar"
+            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww"
+            className="avatar"
+            id="fade-button"
+            aria-controls={open ? "fade-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? "true" : undefined}
+            onClick={handleClick}
+          />
+        </IconButton>
+      </Tooltip>
+
       <Menu
         MenuListProps={{
           "aria-labelledby": "fade-button",
@@ -51,6 +61,8 @@ const ProfileMenu = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        transformOrigin={{ horizontal: "right", vertical: "top" }}
+        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         sx={{
           marginTop: "1rem",
         }}
