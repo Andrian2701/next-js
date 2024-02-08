@@ -1,0 +1,27 @@
+.sneakers-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .sneaker-card {
+    height: 18rem;
+    width: 14rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0.8rem;
+
+    div {
+      border-radius: 0.8rem;
+
+      img {
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius: 0.8rem;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  }
+}
