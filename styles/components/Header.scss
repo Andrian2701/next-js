@@ -13,6 +13,21 @@ nav {
   }
 
   .left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .mob-menu-icon {
+      svg {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: rgb(99, 115, 129);
+      }
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
     a {
       text-decoration: none;
       color: #050505;
@@ -31,6 +46,10 @@ nav {
       list-style: none;
       display: flex;
       gap: 1.5rem;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
 
       li {
         cursor: pointer;

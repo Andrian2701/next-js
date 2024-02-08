@@ -1,0 +1,55 @@
+.mob-menu {
+  width: 290px;
+  padding: 1rem 2rem 1rem 2rem;
+  height: 100%;
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .logo {
+      text-decoration: none;
+      color: #050505;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #50c878;
+    }
+
+    .profile-badge {
+      background-color: rgba(145, 158, 171, 0.12);
+      padding: 1rem 1rem 1rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border-radius: 0.8rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: rgb(99, 115, 129);
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          cursor: pointer;
+          transition-duration: 0.2s;
+          border-radius: 0.5rem;
+          padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+
+          &:hover {
+            background-color: rgba(145, 158, 171, 0.1);
+          }
+        }
+      }
+    }
+  }
+}
