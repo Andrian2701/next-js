@@ -34,7 +34,7 @@ const LangMenu = () => {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         sx={{
-          marginTop: "1rem",
+          marginTop: "1.8rem",
         }}
       >
         <List

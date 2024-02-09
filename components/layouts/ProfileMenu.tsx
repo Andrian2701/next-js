@@ -40,7 +40,7 @@ const ProfileMenu = () => {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         sx={{
-          marginTop: "1rem",
+          marginTop: "1.7rem",
         }}
       >
         <List sx={{ width: "12rem", padding: 0 }}>
