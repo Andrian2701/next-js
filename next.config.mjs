@@ -2,19 +2,6 @@
 const nextConfig = {
   env: {
     API_URL: "https://shoes-collections.p.rapidapi.com/shoes",
-    STEPS: [
-      "New order placed #XF-2346",
-      "15 Invoices have been paid",
-      "Order #37745 from September",
-      "2010, orders, $5220",
-    ],
-    TASKS: [
-      "Create New Logo",
-      "Bissness Meeting",
-      "Sport & Health",
-      "Sprint Showcase",
-      "Coffee",
-    ],
   },
 };
 

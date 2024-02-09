@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 
-import { widgetsData } from "@/data/widgets";
-import "../../styles/components/dash/WidgetSummary.scss";
+import { widgetsData } from "@/placeholder/widgets";
+import "../../styles/dash/WidgetSummary.scss";
 
 const WidgetSummary = () => {
   return (

@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import "./../styles/components/SneakerCard.scss";
+import "./../styles/SneakerCard.scss";
 
 type Sneakers = {
   id: number;
@@ -18,10 +18,10 @@ type SneakersArr = {
   sneakers: Sneakers[];
 };
 
-const SneakerCard = ({ sneakers }: SneakersArr) => {
+const SneakersCard = ({ sneakers }: SneakersArr) => {
   return (
     <div className="sneakers-container">
-      {sneakers.map((item: Sneakers) => (
+      {sneakers.map((item) => (
         <>
           <Card className="sneaker-card" key={item.id}>
             <CardActionArea disableRipple>
@@ -42,4 +42,4 @@ const SneakerCard = ({ sneakers }: SneakersArr) => {
   );
 };
 
-export default SneakerCard;
+export default SneakersCard;

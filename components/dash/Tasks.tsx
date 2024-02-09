@@ -11,9 +11,15 @@ import {
   Checkbox,
 } from "@mui/material";
 
-import "../../styles/components/dash/Tasks.scss";
+import "../../styles/dash/Tasks.scss";
 
-const tasks: any = process.env.TASKS;
+const tasks: string[] = [
+  "Create New Logo",
+  "Bissness Meeting",
+  "Sport & Health",
+  "Sprint Showcase",
+  "Coffee",
+];
 
 const NewsUpdate = () => {
   const [checked, setChecked] = useState<number[]>([]);
@@ -33,11 +39,10 @@ const NewsUpdate = () => {
     <Box className="container" boxShadow={2}>
       <h2>Tasks</h2>
       <List className="task-list">
-        {tasks.map((item: string, idx: number) => (
+        {tasks.map((item, idx) => (
           <ListItem key={item} disablePadding>
             <ListItemButton
               onClick={handleToggle(idx)}
-              dense
               disableRipple
               className="list-item"
             >
