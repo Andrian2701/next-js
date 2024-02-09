@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { BiSolidError } from "react-icons/bi";
 import { RiShoppingBag2Fill } from "react-icons/ri";

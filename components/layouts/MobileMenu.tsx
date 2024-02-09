@@ -1,4 +1,8 @@
-import { List } from "@mui/material";
+"use client";
+
+import { useState } from "react";
+import { List, Drawer, IconButton } from "@mui/material";
+import { IoMenuSharp } from "react-icons/io5";
 
 import NavLinks from "@/components/common/NavLinks";
 import Logo from "@/components/common/Logo";
@@ -6,17 +10,47 @@ import ProfileAvatar from "@/components/common/ProfileAvatar";
 import "../../styles/layouts/MobileMenu.scss";
 
 const MobileMenu = ({ onClick }: any) => {
+  const [mobMenu, setMobMenu] = useState({
+    left: false,
+  });
+
+  const toggleMobMenu =
+    (anchor: string, open: boolean) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+
+      setMobMenu({ ...mobMenu, [anchor]: open });
+    };
+
   return (
-    <div className="mob-menu">
-      <List className="list">
-        <Logo onClick={onClick} />
-        <div className="profile-badge">
-          <ProfileAvatar />
-          <p>Tom Aliston</p>
+    <IconButton className="mob-menu-icon">
+      <IoMenuSharp onClick={toggleMobMenu("left", true)} />
+      <Drawer
+        anchor={"left"}
+        open={mobMenu["left"]}
+        onClose={toggleMobMenu("left", false)}
+      >
+        <div className="mob-menu">
+          <List className="list">
+            <Logo onClick={toggleMobMenu("left", false)} />
+            <div className="profile-badge">
+              <ProfileAvatar />
+              <p>Tom Aliston</p>
+            </div>
+            <NavLinks
+              selector="menu-links"
+              onClick={toggleMobMenu("left", false)}
+            />
+          </List>
         </div>
-        <NavLinks selector="menu-links" onClick={onClick} />
-      </List>
-    </div>
+      </Drawer>
+    </IconButton>
   );
 };
 

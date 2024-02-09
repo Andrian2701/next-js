@@ -9,7 +9,7 @@ const options = {
 };
 
 export const getSneakers = async (
-  revalidate = { next: { revalidate: 3600 } }
+  revalidate = { next: { revalidate: 60 } }
 ) => {
   const response = await fetch(url, { ...options, ...revalidate });
   return response.json();
