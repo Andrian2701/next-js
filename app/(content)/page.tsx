@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import OrderTimeline from "@/components/dash/OrderTimeline";
 import Tasks from "@/components/dash/Tasks";
 import WidgetSummary from "@/components/dash/WidgetSummary";
-import "../styles/pages/Home.scss";
+import "../../styles/pages/Home.scss";
 
 export const metadata: Metadata = {
   title: "Dashboard",

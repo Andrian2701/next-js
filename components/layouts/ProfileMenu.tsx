@@ -45,7 +45,9 @@ const ProfileMenu = () => {
       >
         <List sx={{ width: "12rem", padding: 0 }}>
           <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>Sign In</MenuItem>
+          <Link href="/sign-in">
+            <MenuItem onClick={handleClose}>Sign In</MenuItem>
+          </Link>
           <div className="btn">
             <Link href="#" className="log-out-btn">
               Log out

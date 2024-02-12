@@ -1,7 +1,6 @@
 import { Roboto } from "next/font/google";
 
-import Header from "@/components/layouts/Header";
-import "./../styles/boilerplate.scss";
+import "../../styles/boilerplate.scss";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -9,17 +8,14 @@ const roboto = Roboto({
   variable: "--var-roboto",
 });
 
-export default function RootLayout({
+export default function AuthLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.variable}>
-        <Header />
-        <main>{children}</main>
-      </body>
+      <body className={roboto.variable}>{children}</body>
     </html>
   );
 }

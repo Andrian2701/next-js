@@ -1,11 +1,6 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 
-import "../styles/pages/NotFound.scss";
-
-export const metadata: Metadata = {
-  title: "404",
-};
+import "../../styles/pages/NotFound.scss";
 
 const NotFound = () => {
   return (
