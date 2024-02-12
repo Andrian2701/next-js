@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   Menu,
   MenuItem,
-  Avatar,
-  Button,
   IconButton,
   List,
   Tooltip,
+  Divider,
 } from "@mui/material";
 
 import "../../styles/layouts/ProfileMenu.scss";
@@ -29,8 +29,8 @@ const ProfileMenu = () => {
   return (
     <>
       <Tooltip title="Profile">
-        <IconButton>
-          <ProfileAvatar onClick={handleClick} />
+        <IconButton onClick={handleClick}>
+          <ProfileAvatar />
         </IconButton>
       </Tooltip>
       <Menu
@@ -45,9 +45,11 @@ const ProfileMenu = () => {
       >
         <List sx={{ width: "12rem", padding: 0 }}>
           <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
+          <MenuItem onClick={handleClose}>Sign In</MenuItem>
           <div className="btn">
-            <Button className="log-out-btn">Log out</Button>
+            <Link href="#" className="log-out-btn">
+              Log out
+            </Link>
           </div>
         </List>
       </Menu>
