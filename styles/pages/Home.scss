@@ -9,4 +9,14 @@ h2 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
+
+  @media (max-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 764px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

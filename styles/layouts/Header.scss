@@ -12,12 +12,12 @@ header {
     align-items: center;
     padding: 1rem 8rem 1rem 8rem;
 
-    @media (max-width: 864px) {
-      padding: 1rem 5rem 1rem 5rem;
+    @media (max-width: 1200px) {
+      padding: 1rem 2rem 1rem 2rem;
     }
 
-    @media (max-width: 564px) {
-      padding: 1rem 2rem 1rem 2rem;
+    @media (max-width: 500px) {
+      padding: 1rem 1.2rem 1rem 1.2rem;
     }
 
     .left {

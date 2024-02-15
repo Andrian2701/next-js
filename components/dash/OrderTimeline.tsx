@@ -19,7 +19,7 @@ const OrderTimeline = () => {
       <div className="stepper-container">
         <Stepper orientation="vertical" className="stepper">
           {steps.map((step) => (
-            <Step>
+            <Step key={step}>
               <StepLabel key={step} StepIconComponent={QontoStepIcon}>
                 {step}
               </StepLabel>

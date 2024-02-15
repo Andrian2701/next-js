@@ -31,8 +31,13 @@ const MobileMenu = () => {
     };
 
   return (
-    <IconButton className="mob-menu-icon">
-      <IoMenuSharp onClick={toggleMobMenu("left", true)} />
+    <>
+      <IconButton
+        className="mob-menu-icon"
+        onClick={toggleMobMenu("left", true)}
+      >
+        <IoMenuSharp />
+      </IconButton>
       <Drawer
         anchor={"left"}
         open={mobMenu["left"]}
@@ -52,7 +57,7 @@ const MobileMenu = () => {
           </List>
         </div>
       </Drawer>
-    </IconButton>
+    </>
   );
 };
 
