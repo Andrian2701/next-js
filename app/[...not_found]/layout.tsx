@@ -2,6 +2,7 @@ import { Roboto } from "next/font/google";
 import type { Metadata } from "next";
 
 import Header from "@/components/layouts/Header";
+import SessionProvider from "../SessionProvider";
 import "../../styles/boilerplate.scss";
 
 export const metadata: Metadata = {
@@ -22,7 +23,9 @@ export default function NotFoundLayout({
   return (
     <html lang="en">
       <body className={roboto.variable}>
-        <Header />
+        <SessionProvider>
+          <Header />
+        </SessionProvider>
         <main>{children}</main>
       </body>
     </html>

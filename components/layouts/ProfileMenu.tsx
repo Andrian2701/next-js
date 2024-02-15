@@ -2,14 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import {
-  Menu,
-  MenuItem,
-  IconButton,
-  List,
-  Tooltip,
-  Divider,
-} from "@mui/material";
+import { signOut } from "next-auth/react";
+import { Menu, MenuItem, IconButton, List, Tooltip } from "@mui/material";
 
 import "../../styles/layouts/ProfileMenu.scss";
 import ProfileAvatar from "../common/ProfileAvatar";
@@ -49,7 +43,7 @@ const ProfileMenu = () => {
             <MenuItem onClick={handleClose}>Sign In</MenuItem>
           </Link>
           <div className="btn">
-            <Link href="#" className="log-out-btn">
+            <Link href="#" className="log-out-btn" onClick={() => signOut()}>
               Log out
             </Link>
           </div>

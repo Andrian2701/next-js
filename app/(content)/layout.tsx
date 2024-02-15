@@ -1,5 +1,6 @@
 import { Roboto } from "next/font/google";
 
+import SessionProvider from "../SessionProvider";
 import Header from "@/components/layouts/Header";
 import "../../styles/boilerplate.scss";
 
@@ -17,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.variable}>
-        <Header />
+        <SessionProvider>
+          <Header />
+        </SessionProvider>
         <main>{children}</main>
       </body>
     </html>

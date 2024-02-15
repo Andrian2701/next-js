@@ -6,6 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 
+import { getSneakers } from "@/pages/api/data/api";
 import "./../styles/SneakerCard.scss";
 
 type Sneakers = {
@@ -14,14 +15,12 @@ type Sneakers = {
   image: string;
 };
 
-type SneakersArr = {
-  sneakers: Sneakers[];
-};
+const SneakersCard = async () => {
+  const sneakers = await getSneakers();
 
-const SneakersCard = ({ sneakers }: SneakersArr) => {
   return (
     <div className="sneakers-container">
-      {sneakers.map((item) => (
+      {sneakers.map((item: Sneakers) => (
         <>
           <Card className="sneaker-card" key={item.id}>
             <CardActionArea disableRipple>

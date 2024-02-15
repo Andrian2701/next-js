@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 import { List, Drawer, IconButton } from "@mui/material";
 import { IoMenuSharp } from "react-icons/io5";
 
@@ -9,10 +10,11 @@ import Logo from "@/components/common/Logo";
 import ProfileAvatar from "@/components/common/ProfileAvatar";
 import "../../styles/layouts/MobileMenu.scss";
 
-const MobileMenu = ({ onClick }: any) => {
+const MobileMenu = () => {
   const [mobMenu, setMobMenu] = useState({
     left: false,
   });
+  const session = useSession();
 
   const toggleMobMenu =
     (anchor: string, open: boolean) =>
@@ -41,7 +43,7 @@ const MobileMenu = ({ onClick }: any) => {
             <Logo onClick={toggleMobMenu("left", false)} />
             <div className="profile-badge">
               <ProfileAvatar />
-              <p>Tom Aliston</p>
+              <p>{session?.data?.user?.email || "Email"}</p>
             </div>
             <NavLinks
               selector="menu-links"
