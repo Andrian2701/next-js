@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import SneakersCard from "@/components/SneakersCard";
+import { getSneakers } from "@/pages/api/data/api";
 import "../../../styles/pages/Home.scss";
 
 export const metadata: Metadata = {
@@ -8,10 +9,12 @@ export const metadata: Metadata = {
 };
 
 const Products = async () => {
+  const sneakers = await getSneakers();
+
   return (
     <>
       <h2>Products</h2>
-      <SneakersCard />
+      <SneakersCard sneakers={sneakers} />
     </>
   );
 };
