@@ -9,7 +9,7 @@ const NotFound = () => {
     <div className="not-found-page">
       <h1>Sorry, page not found!</h1>
       <p>
-        Sorry, we couldn't find the page you're looking for. Perhaps you've
+        Sorry, we could not find the page you are looking for. Perhaps you have
         mistyped the URL? Be sure to check your spelling.
       </p>
       <div className="not-found-img">

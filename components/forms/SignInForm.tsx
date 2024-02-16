@@ -30,7 +30,7 @@ const SignInForm = () => {
         <div className="form-text">
           <h2>Sign in to Dash</h2>
           <p>
-            Don't have an account? <Link href="sign-up">Get started</Link>
+            Do not have an account? <Link href="sign-up">Get started</Link>
           </p>
         </div>
         <Divider sx={{ color: "rgb(99, 115, 129)" }}>Or</Divider>
