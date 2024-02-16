@@ -21,23 +21,24 @@ type Sneakers = {
 const SneakersCard = ({ sneakers }: Sneakers) => {
   return (
     <div className="sneakers-container">
-      {sneakers.map((item) => (
-        <>
-          <Card className="sneaker-card" key={item.id}>
-            <CardActionArea disableRipple>
-              <CardMedia
-                component="img"
-                height="200"
-                image={item.image}
-                alt={item.name}
-              />
-            </CardActionArea>
-            <CardContent>
-              <Typography>{item.name}</Typography>
-            </CardContent>
-          </Card>
-        </>
-      ))}
+      {sneakers &&
+        sneakers.map((item) => (
+          <>
+            <Card className="sneaker-card" key={item.id}>
+              <CardActionArea disableRipple>
+                <CardMedia
+                  component="img"
+                  height="200"
+                  image={item.image}
+                  alt={item.name}
+                />
+              </CardActionArea>
+              <CardContent>
+                <Typography>{item.name}</Typography>
+              </CardContent>
+            </Card>
+          </>
+        ))}
     </div>
   );
 };
