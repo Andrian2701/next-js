@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 import "../../styles/pages/NotFound.scss";
 
@@ -13,7 +14,7 @@ const NotFound = () => {
         mistyped the URL? Be sure to check your spelling.
       </p>
       <div className="not-found-img">
-        <img
+        <Image
           src="https://muidash.netlify.app/static/media/404.21608b42.svg"
           alt="404"
         />
